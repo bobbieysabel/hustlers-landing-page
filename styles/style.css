@@ -41,13 +41,12 @@ ul {
 /*Layout*/
 
 header {
-    grid-area: "header";
+    grid-area: header;
     background: url(/images/header_background_mobile.png) no-repeat var(--blue);
     background-size: 100vw;
     -webkit-clip-path: polygon(50% 100%, 100% 90%, 100% 0, 0 0, 0 90%);
     clip-path: polygon(50% 100%, 100% 90%, 100% 0, 0 0, 0 90%);
 }
-
 @media (min-width: 1000px) {
     header {
         background: url(/images/header_background.png) no-repeat var(--blue);
@@ -144,11 +143,11 @@ a.button {
 main {
     display: grid;
     grid-template-areas: "major-content" "misc-content";
-    grid-area: "main";
+    grid-area: main;
 }
 
 section.pink {
-    grid-area: "major-content";
+    grid-area: major-content;
     -webkit-clip-path: polygon(50% 100%, 100% 90%, 100% 0, 0 0, 0 90%);
     clip-path: polygon(50% 100%, 100% 90%, 100% 0, 0 0, 0 90%);
     padding-top: 3rem;
@@ -210,7 +209,7 @@ section.pink {
 }*/
 
 section.white {
-    grid-area: "misc-content";
+    grid-area: misc-content;
     background-color: var(--white);
     -webkit-clip-path: polygon(50% 10%, 100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
     clip-path: polygon(50% 10%, 100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
@@ -218,7 +217,7 @@ section.white {
 }
 
 footer {
-    grid-area: "footer";
+    grid-area: footer;
 }
 
 #hustlers-still {
