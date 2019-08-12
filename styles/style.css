@@ -32,11 +32,9 @@ ul {
 }
 
 /*Container grid*/
+
 .container {
-    grid-template-areas:
-    "header"
-    "main"
-    "footer";
+    grid-template-areas: "header" "main" "footer";
 }
 
 /*Layout*/
@@ -48,6 +46,12 @@ header {
     background-size: 100vw;
     -webkit-clip-path: polygon(50% 100%, 100% 90%, 100% 0, 0 0, 0 90%);
     clip-path: polygon(50% 100%, 100% 90%, 100% 0, 0 0, 0 90%);
+}
+
+@media (min-width: 1000px) {
+    header {
+        background: url(/images/header_background.png) no-repeat;
+    }
 }
 
 .header-content {
@@ -69,6 +73,7 @@ header {
 }
 
 /*Changes default font awesome colors*/
+
 .fab {
     color: var(--white);
 }
@@ -132,9 +137,7 @@ header {
 
 main {
     display: grid;
-    grid-template-areas: 
-    "major-content"
-    "misc-content";
+    grid-template-areas: "major-content" "misc-content";
     grid-area: "main";
 }
 
@@ -154,22 +157,36 @@ section.pink {
     margin: 0 auto;
 }
 
-.about, .trailer, .about-image {
+.about, .trailer-container, .about-image {
     grid-column: 1/5;
     margin: 0 20px;
     padding: 0;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 @media (min-width: 1000px) {
     .about {
         grid-column: 1/3;
     }
-
     .about-image {
         grid-column: 3/5;
     }
-
-    .trailer {
+    .trailer-container {
         grid-column: -1/1;
     }
 }
@@ -192,6 +209,7 @@ section.white {
 footer {
     grid-area: "footer";
 }
+
 #hustlers-still {
     grid-column: 1/5;
     margin-top: 4rem;
@@ -278,7 +296,6 @@ p {
     text-transform: uppercase;
 }
 
-
 /*Button style*/
 
 .button-text {
@@ -308,10 +325,12 @@ a {
 }
 
 /*Blockquote*/
+
 blockquote {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
 }
+
 .blockquote-rectangle {
     grid-column: 1/3;
     grid-row: -1/1;
