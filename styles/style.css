@@ -157,9 +157,15 @@ section.pink {
     margin: 0 auto;
 }
 
+@media (max-width: 1000px) {
+    .major-content, .misc-content {
+        margin: 0 20px;
+    }
+}
+
 .about, .trailer-container, .about-image {
     grid-column: 1/5;
-    margin: 0 20px;
+    /*margin: 0 20px;*/
     padding: 0;
 }
 
@@ -203,7 +209,7 @@ section.white {
     background-color: var(--white);
     -webkit-clip-path: polygon(50% 10%, 100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
     clip-path: polygon(50% 10%, 100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
-    padding-bottom: 4rem;
+    padding: 4rem 0;
 }
 
 footer {
@@ -329,6 +335,7 @@ a {
 blockquote {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    margin: 0;
 }
 
 .blockquote-rectangle {
