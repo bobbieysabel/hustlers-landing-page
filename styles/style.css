@@ -25,6 +25,16 @@ ul {
     margin: 0;
 }
 
+/*Container grid*/
+
+@media (max-width: 1000px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        margin: 20px;
+    }
+}
+
 /*Typography*/
 
 h1 {
@@ -49,4 +59,25 @@ p {
 .cast {
     font: 700 1.777rem "Oswald";
     text-transform: uppercase;
+}
+
+/*Button style*/
+
+.button-text {
+    font: 700 1rem "Oswald";
+    text-transform: uppercase;
+}
+
+/*Image styles*/
+
+.img-container {
+    max-width: 100%;
+}
+
+.img-container img {
+    max-width: 100%;
+}
+
+.video {
+    max-width: 100%;
 }
