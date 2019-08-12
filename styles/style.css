@@ -27,12 +27,79 @@ ul {
 
 /*Container grid*/
 
-@media (max-width: 1000px) {
+/*@media (max-width: 1000px) {
     .container {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-        margin: 20px;
+        grid-template-areas: repeat(4, 1fr);
     }
+}*/
+
+/*Layout*/
+
+header {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100vw;
+    height: 100%;
+    background: url(/images/header_background_mobile.png) no-repeat;
+    -webkit-clip-path: polygon(50% 100%, 100% 70%, 100% 0, 0 0, 0 70%);
+    clip-path: polygon(50% 100%, 100% 70%, 100% 0, 0 0, 0 70%);
+}
+
+.social {
+    grid-column: 2/4;
+}
+
+.social ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#title {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    grid-column: 1/5;
+}
+
+.button-container {
+    grid-column: 2/4;
+}
+
+#release-date {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    grid-column: 1/5;
+}
+
+#cast-list {
+    grid-column: 1/5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--white);
+}
+
+section.pink {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background: url(/images/pink_background_mobile.svg) no-repeat;
+    width: 100vw;
+}
+
+.main-content {
+    grid-column: 1/5;
+    margin: 20px;
+}
+
+footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background: url(/images/pink_footer_mobile.svg) no-repeat;
+    width: 100vw;
 }
 
 /*Typography*/
@@ -40,6 +107,7 @@ ul {
 h1 {
     font: 400 2.369rem "Monoton";
     text-transform: uppercase;
+    color: var(--white);
 }
 
 h2 {
@@ -54,9 +122,13 @@ p {
 .subhead {
     font: 700 0.75rem "Oswald";
     text-transform: uppercase;
+    color: var(--pink);
 }
 
 .cast {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font: 700 1.777rem "Oswald";
     text-transform: uppercase;
 }
@@ -66,6 +138,13 @@ p {
 .button-text {
     font: 700 1rem "Oswald";
     text-transform: uppercase;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--pink);
+    font-weight: 700;
 }
 
 /*Image styles*/
