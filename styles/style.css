@@ -115,16 +115,24 @@ header {
 section.pink {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
     width: 100vw;
     -webkit-clip-path: polygon(50% 100%, 100% 90%, 100% 0, 0 0, 0 90%);
     clip-path: polygon(50% 100%, 100% 90%, 100% 0, 0 0, 0 90%);
+    padding-bottom: 5rem;
 }
 
-.main-content {
+.about, .trailer, .about-image {
+    grid-column: 1/5;
+    margin: 0 20px;
+    padding: 0;
+}
+
+/*.main-content {
     grid-column: 1/5;
     padding-bottom: 4rem;
     margin: 20px;
-}
+}*/
 
 section.white {
     display: grid;
