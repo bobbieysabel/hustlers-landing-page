@@ -64,7 +64,11 @@ header {
 }
 
 .button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     grid-column: 2/4;
+    padding: 1rem;
 }
 
 #release-date {
@@ -107,11 +111,36 @@ section.white {
     clip-path: polygon(50% 10%, 100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
 }
 
-footer {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    background: url(/images/pink_footer_mobile.svg) no-repeat;
+#hustlers-still {
+    grid-column: 1/5;
+    margin: 20px;
+    padding-top: 4rem;
+}
+
+#wall-street-quote {
+    grid-column: 1/5;
+    margin: 20px;
+}
+
+
+#director-credit, #rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 1/5;
+    color: var(--black);
+}
+
+.footer-bottom {
     width: 100vw;
+    padding-top: 5rem;
+    background-color: var(--blue);
+    -webkit-clip-path: polygon(50% 50%, 100% 0, 100% 100%, 50% 100%, 0 100%, 0 0);
+    clip-path: polygon(50% 50%, 100% 0, 100% 100%, 50% 100%, 0 100%, 0 0);
+}
+
+span.box {
+    border: 1px solid var(--black);
 }
 
 /*Typography*/
