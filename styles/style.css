@@ -35,13 +35,13 @@ ul {
 
 .container {
     grid-template-areas: "header" "main" "footer";
+    /*max-width: 100%;*/
 }
 
 /*Layout*/
 
 header {
     grid-area: "header";
-    width: 100vw;
     background: url(/images/header_background_mobile.png) no-repeat;
     background-size: 100vw;
     -webkit-clip-path: polygon(50% 100%, 100% 90%, 100% 0, 0 0, 0 90%);
@@ -85,12 +85,16 @@ header {
     grid-column: 1/5;
     grid-row: 3/4;
     margin-top: 0;
+    margin-bottom: 0;
 }
 
 .button-container {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+a.button {
     grid-column: 2/4;
 }
 
@@ -121,6 +125,7 @@ header {
     align-items: center;
     grid-column: 1/5;
     grid-row: 2/3;
+    margin-top: 3rem;
     margin-bottom: 0;
 }
 
@@ -131,6 +136,7 @@ header {
     justify-content: space-between;
     align-items: center;
     color: var(--white);
+    margin-top: 10rem;
     padding-top: 3rem;
     padding-bottom: 10rem;
 }
@@ -143,9 +149,9 @@ main {
 
 section.pink {
     grid-area: "major-content";
-    width: 100vw;
     -webkit-clip-path: polygon(50% 100%, 100% 90%, 100% 0, 0 0, 0 90%);
     clip-path: polygon(50% 100%, 100% 90%, 100% 0, 0 0, 0 90%);
+    padding-top: 3rem;
     padding-bottom: 5rem;
 }
 
@@ -205,7 +211,6 @@ section.pink {
 
 section.white {
     grid-area: "misc-content";
-    width: 100vw;
     background-color: var(--white);
     -webkit-clip-path: polygon(50% 10%, 100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
     clip-path: polygon(50% 10%, 100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
@@ -247,7 +252,6 @@ footer {
 }
 
 .footer-bottom {
-    width: 100vw;
     padding-top: 5rem;
     background-color: var(--blue);
     -webkit-clip-path: polygon(50% 50%, 100% 0, 100% 100%, 50% 100%, 0 100%, 0 0);
@@ -335,7 +339,7 @@ a {
 blockquote {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    margin: 0;
+    margin: 1rem 0;
 }
 
 .blockquote-rectangle {
