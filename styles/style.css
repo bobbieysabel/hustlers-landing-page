@@ -18,3 +18,35 @@ html {
 body {
     background: var(--white);
 }
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/*Typography*/
+
+h1 {
+    font: 400 2.369rem "Monoton";
+    text-transform: uppercase;
+}
+
+h2 {
+    font: 700 1.333rem "Oswald";
+    text-transform: uppercase;
+}
+
+p {
+    font: 400 1rem "Montserrat";
+}
+
+.subhead {
+    font: 700 0.75rem "Oswald";
+    text-transform: uppercase;
+}
+
+.cast {
+    font: 700 1.777rem "Oswald";
+    text-transform: uppercase;
+}
