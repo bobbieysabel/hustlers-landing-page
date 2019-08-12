@@ -42,14 +42,14 @@ ul {
 
 header {
     grid-area: header;
-    background: url(/images/header_background_mobile.png) no-repeat var(--blue);
+    background: url("/images/header_background_mobile.png") no-repeat var(--blue);
     background-size: 100vw;
     -webkit-clip-path: polygon(50% 100%, 100% 90%, 100% 0, 0 0, 0 90%);
     clip-path: polygon(50% 100%, 100% 90%, 100% 0, 0 0, 0 90%);
 }
 @media (min-width: 1000px) {
     header {
-        background: url(/images/header_background.png) no-repeat var(--blue);
+        background: url("/images/header_background.png") no-repeat var(--blue);
     }
 }
 
